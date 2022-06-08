@@ -1,0 +1,31 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: var(--background-color);
+    font-style: normal;
+    text-decoration: none;
+    color: var(--white-color);
+    margin: auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
