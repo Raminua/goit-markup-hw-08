@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    background-color: var(--background-color);
+    background-color:$background-color;
     font-style: normal;
     text-decoration: none;
-    color: var(--white-color);
+    color: $white-color;
     margin: auto;
 }
 
@@ -28,4 +28,32 @@ a {
 }
 li {
     list-style: none;
+}
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.no-scroll {
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        overflow: auto;
+    }
 }
