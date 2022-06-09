@@ -1,0 +1,23 @@
+.social {
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin: 0px 0px 20px 0px;
+
+        color: $white-color;
+    }
+}
+
+.footer__social {
+    .social__link {
+        fill: $white-color;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}

@@ -1,0 +1,48 @@
+.address {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+        justify-content: start;
+    }
+
+    &__list {
+        @media screen and (min-width: 1200px) {
+            width: max-content;
+        }
+    }
+
+    &__item {
+        height: 21px;
+        text-align: center;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
+    }
+
+    &__link {
+        color: $white-color;
+    }
+
+    &__email,
+    &__tel {
+        color: $text-grey-footer;
+        transform: color $transition;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}

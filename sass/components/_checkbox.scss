@@ -1,0 +1,31 @@
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &__icon {
+        content: '';
+        margin: 0;
+
+        border: 1.78px solid #2a2a2a;
+        border-radius: 1.78px;
+        transition: border-color $transition, background-color $transition;
+    }
+
+    &:hover+.checkbox__icon,
+    &:focus+.checkbox__icon {
+        border-color: $accent-color;
+    }
+
+    &:checked+.checkbox__icon {
+        background-size: contain;
+        background-origin: border-box;
+        border-color: $accent-color;
+        background-color: $accent-color;
+    }
+}

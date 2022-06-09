@@ -1,0 +1,30 @@
+.section {
+    justify-content: center;
+
+    @media screen and (max-width: 1199px) {
+        padding: 60px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 30px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.17;
+        }
+    }
+}

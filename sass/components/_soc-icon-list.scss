@@ -1,0 +1,31 @@
+.social {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        box-sizing: content-box;
+        padding: 12px;
+
+        border-radius: 50%;
+
+        fill: $soc-icon-grey;
+        background-color: transparent;
+        transition: fill $transition, background-color $transition;
+
+        &:focus,
+        &:hover {
+            fill: $white-color;
+            background-color: $accent-color;
+        }
+    }
+
+}

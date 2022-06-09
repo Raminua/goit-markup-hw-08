@@ -1,0 +1,25 @@
+.logo {
+    text-decoration-line: none;
+    font-family: $logo-font;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.17;
+    }
+
+    &--accent {
+        color: $accent-color;
+    }
+
+    &--header {
+        color: $text-black;
+    }
+
+    &--footer {
+        color: $white-color;
+    }
+}

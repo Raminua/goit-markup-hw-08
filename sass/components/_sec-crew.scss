@@ -1,0 +1,15 @@
+.crew {
+    background-color: $section-grey;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: calc(100% + 2 * 15px);
+        margin: -15px;
+    }
+
+    &__item {
+        margin: 15px;
+    }
+}

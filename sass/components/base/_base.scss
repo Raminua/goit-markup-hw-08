@@ -1,34 +1,9 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    background-color:$background-color;
-    font-style: normal;
-    text-decoration: none;
-    color: $white-color;
-    margin: auto;
+    font-family: $main-font;
+    color: $text-black;
+    background-color: $white-color;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-    margin: 0;
-}
-
-button {
-    font-family: inherit;
-}
-a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
-}
 button {
     cursor: pointer;
     font-family: inherit;
@@ -40,6 +15,27 @@ img {
     height: auto;
     object-fit: cover;
 }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 html {
     box-sizing: border-box;
 }

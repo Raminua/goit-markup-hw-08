@@ -1,109 +1,155 @@
+.header {
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
 
-.header__container{
-    display: flex;
-    align-items: center;
-}
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-.page-header{
-    color: $secondory-color;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.15;
-        letter-spacing: 0.02em;
-        list-style: none;
-        background-color: $white-color;
-        border-bottom: 1px solid #ECECEC;
-}
-
-.page-logo{
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    margin-right: 90px;
-    color: $accent-color;
-    
- }
- 
- .logo-black{
-     color: $secondory-color;
- }
- 
- .site-nav {
-     display: flex;
-     margin: 0;
-     padding: 0;
- }
-
- .site-nav__item{
-    margin-left: 50px;
-    &:first-child{
-        margin-left: 0;
-    }
- }
-
- .site-nav__link{
-    position: relative;
-    color: inherit;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color $transition;
-    &:hover,
-    &:focus{
-        color: $accent-color;
-    }
-}
-
- .link--active{
-     color: $accent-color;
-     &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: #2196F3;
-            transform: translateY(30px);
+        @media (max-width: 767px) {
+            height: 60px;
         }
-     }
- 
+    }
 
+    .nav {
+        @media screen and (min-width: 768px) {
+            margin-left: 93px;
+        }
+    }
 
- 
- .contact{
-    display: flex;
-    margin-left: auto;
+    .contact {
+        margin-left: auto;
+    }
+}
 
- }
+.mobile-menu {
+    display: none;
 
- .contact__list{
-    margin-left: 50px;
+    @media (max-width: 767px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 48px 40px;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
 
- }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
 
- .contact__link{
-    color:$primary-color;
+.menu-btn {
     display: flex;
     align-items: center;
-    fill:$primary-color;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color $transition, fill $transition;
-    &:hover,
-    &:focus{
-        color: $accent-color;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &:focus {
         fill: $accent-color;
     }
- }
 
- .contact__mail, .contact__phone{
-     margin-right: 10px;
- }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-menu-socials {
+    @media (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+
+        color: #2196f3;
+
+        .mobile-menu-link {
+            color: currentColor;
+        }
+
+        .mobile-menu-social {
+            &:not(:last-child) {
+                padding-right: 10px;
+
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-socials {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+    transform: translateX(100%);
+
+    display: flex;
+    flex-direction: column;
+    padding: 48px 40px;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #fff;
+
+    transition: transform 400ms ease-in;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.icon-open {
+    opacity: 1;
+}
+
+.menu-btn.is-open .icon-open {
+    opacity: 0;
+}
+
+.menu-btn.is-open {
+    position: relative;
+
+    z-index: 10;
+}
+
+.icon-close {
+    opacity: 0;
+}
+
+.menu-btn.is-open .icon-close {
+    opacity: 1;
+}
+
+.header-tab-desk {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
